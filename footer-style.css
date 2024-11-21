@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Footer Styles */
+  footer {
+    /* margin: auto;
+    width: 80%; */
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Use 100% to make sure the footer fits within the viewport */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  footer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  footer p,
+  footer ul {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer ul li a:hover {
+    color: #05462d;
+  }
+  
+  /* Footer Container Styling */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+    box-sizing: border-box; /* Prevent overflow issues */
+  }
+  
+  .footer-container>div {
+    flex: 1;
+    min-width: 250px;
+    /* Ensures the containers will not shrink too much */
+    max-width: 100%; /* Prevents each container from growing too large */
+  }
+  
+  /* Social Media Styling */
+  .footer-container .social-media {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-container .social-media a {
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .footer-container .social-media #Facebook:hover {
+    color: #1877F2;
+  }
+  
+  .footer-container .social-media #Instagram:hover {
+    color: red;
+  }
+  
+  .footer-container .social-media #LinkedIn:hover {
+    color: #0A66C2;
+  }
+  
+  .footer-container .social-media #Twitter:hover {
+    color: #1DA1F2;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-container>div {
+      min-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  margin-top: 100px;
+  /* Adjust top margin to give space for fixed navbar */
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Enables smooth scrolling for the entire page */
+  font-family: "Poppins", sans-serif;
+}
+
+.image-container {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  margin: 10vh auto;
+  background: url('images/akshardham_monument_with_sarovar-002.jpg') no-repeat center center/cover;
+  background-size: cover;
+  border-radius: 20px;
+  /* transition: 1s ease-in-out; */
+}
+
+/* Dark overlay pseudo-element */
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent black overlay */
+  border-radius: 20px;
+  /* Ensure overlay follows the same border radius */
+}
+
+/* Main navigation bar styling */
+/* Resetting margins and paddings */
+
+
+
+
+/* Content inside the container */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  /* align-content: center; */
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+  /* Ensure content is above the overlay */
+}
+
+.explore_more {
+  background-color: rgb(15, 110, 15);
+  border: 2px solid #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.explore_more:hover {
+  background-color: transparent;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.mid-section {
+  padding: 5rem;
+  gap: 20px;
+  display: flex;
+  /* height: 80vh;
+          width: 100%; */
+  /* border: 2px solid red; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e7e5e5;
+  flex-wrap: wrap;
+}
+
+/* Cards Container */
+.mid-section {
+  padding: 5rem;
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e7e5e5;
+  flex-wrap: wrap;
+}
+
+/* Cards Container */
+.cards {
+  position: relative;
+  height: 40vh;
+  width: 23vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  transition: box-shadow 0.4s ease-in-out;
+  overflow: hidden;
+  border: 8px solid white;
+  /* box-shadow: -2px 4px 20px #414141; */
+}
+
+.cards img {
+  position: relative;
+  object-fit: cover;
+  transition: filter 0.4s ease-in-out;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Hide text by default */
+.cards .content {
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  /* margin: 1rem; */
+  padding: 0.4rem;
+  /* border: 4px solid white; */
+  text-align: center;
+  align-content: center;
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+  height: 95%;
+  width: 95%;
+}
+
+.cards:hover {
+  box-shadow: -10px 15px 18px #212121;
+}
+
+.cards:hover img {
+  filter: grayscale(0.4);
+  filter: brightness(0.5);
+  /* Apply grayscale filter to the image */
+}
+
+.cards:hover .content {
+  opacity: 1;
+  scale: 1;
+}
+
+/* Content inside the card */
+.cards .content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cards .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.mid-section #ayodhya-ram-mandir{
+  width:  91%;
+  border: 10px solid white;
+  border-radius: 3rem;
+  align-content: center;
+  text-align: center;
+}
+.mid-section #ayodhya-ram-mandir button{
+  margin-top: 1rem;
+  background-color: rgb(15, 110, 15);
+  border: 2px solid #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.mid-section #ayodhya-ram-mandir button:hover{
+  background: transparent;
+}
+.ayodhya-ram-mandir img{
+  border-radius: inherit;
+  height: 90%;
+  width: 97%;
+  object-fit: cover;
+
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 1024px) {
+  .cards {
+    width: calc(50% - 20px);
+    /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    width: 100%;
+    /* 1 card per row on small screens */
+  }
+
+  .mid-section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 20px);
+    /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    /* 1 card per row on small screens */
+  }
+}

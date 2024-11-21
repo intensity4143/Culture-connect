@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* Resetting margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            margin-top: 8rem;
+            /* margin-top: 70px; Adjust top margin to give space for fixed navbar */
+        }
+
+        /* Container for cards */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Distribute cards evenly */
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 28vw;
+            height: 75vh;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card img {
+            margin-top: 10px;
+            width: 95%;
+            height: 45%;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            border-radius: inherit;
+            box-shadow: 0px 10px 15px #414141;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: start;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .card-content .card-header{
+            display: flex;
+            /* border: 1px solid red; */
+            height: 2rem;
+            align-items: center;
+            padding: 10px;
+        }
+        .card-content .card-header img{
+            height: 2rem;
+            width: 2rem;
+            box-shadow: none;
+            margin: 1px;
+            border: none;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+        }
+
+        .card-content img{
+            position: relative;
+            margin-top: 0px;
+            box-shadow: none;
+            border: none;
+            height: 2rem;
+            width: 1.4rem;
+            object-fit: contain;
+            
+        }
+        .card-content .pricing{
+            margin-top: 0;
+            /* border: 1px solid green; */
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        .card-content .pricing span{
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+        .card-content .card-footer{
+            height: 8vh;
+            /* text-align: center; */
+            align-content: center;
+        }
+        .card-content button{
+            color: #fff;
+            background-color: rgb(7, 7, 154);
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 15px;
+            border: none;
+        }
+
+        /*  book now button hover effect */
+        .card-content button:hover{
+            scale: 0.9;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: -5px 8px 18px rgba(0, 0, 0, 0.8);
+        }
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .card {
+                width: calc(50% - 20px); /* 2 cards per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%; /* 1 card per row on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <!-- Logo on the left -->
+        <div class="logo-img">
+            <img src="images/main-logo.jpeg" id="logo-img" alt="Company Logo">
+        </div>
+
+        <!-- Menu items centered -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#pack">Packages</a></li>
+            <li><a href="main.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger menu for small screens -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</header>
+<!-- Container for Cards -->
+<div class="cards-container" id="pack">
+    <!-- Row 1 -->
+    <div class="card">
+        <img src="images/Varanasi_20180403170248.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Varanasi</h2>
+            </div>
+            <p>Varanasi is one of the oldest living cities in world, renowned for spiritual significance, Ganges river ghats, and vibrant cultural heritage.</p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 5999 <span>&#8377; 7200</span></div>
+            <div class="card-footer">
+                <button class="book" onclick="window.location.href='payment_form.html?price= &#8377; 5999'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/Taj Mahal (1).jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Agra</h2>
+            </div>
+            <p>Agra is a historic city in India, famously home to the iconic Taj Mahal, a symbol of love and a UNESCO World Heritage Site.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 5400 <span>&#8377; 6800</span></div>
+            <div class="card-footer">
+                <button  onclick="window.location.href='payment_form.html?price=5400'" class="book">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/red fort.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Delhi</h2>
+            </div>
+            <p>Delhi, the capital of India, is a vibrant metropolis blending rich history, cultural heritage, and modern infrastructure.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <!-- <img src="images/icons8-star-48.png" alt=""> -->
+            <div class="pricing">&#8377; 6750 <span>&#8377; 8500</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=6750'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- row - 2 -->
+    <div class="card">
+        <img src="images/p-6.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Jammu & Kashmir</h2>
+            </div>
+            <p>Jammu & Kashmir, known for its breathtaking landscapes, region of stunning natural beauty, rich cultural heritage, and historical significance.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 6450 <span>&#8377; 7900</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=6450'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/g-3.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Amritsar</h2>
+            </div>
+            <p>Amritsar, a spiritual and cultural hub, is home to the Golden Temple, one of the holiest sites in Sikhism.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <!-- <img src="images/icons8-star-48.png" alt=""> -->
+            <div class="pricing">&#8377; 4999 <span>&#8377; 6100</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=4999'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/g-4.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Rajasthan</h2>
+            </div>
+            <p>Rajasthan, known for its royal palaces, vibrant culture, and desert landscapes, is a land of rich history and traditions.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 5999 <span>&#8377; 6900</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=5999'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- row-3 -->
+    <div class="card">
+        <img src="images/staute.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Gujarat</h2>
+            </div>
+            <p>Gujarat, a vibrant state on India's west coast, is renowned for its diverse culture, historic sites, and the iconic Rann of Kutch.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <!-- <img src="images/icons8-star-48.png" alt=""> -->
+            <div class="pricing">&#8377; 5549 <span>&#8377; 7800</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=5549'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/p-4.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Bombay</h2>
+            </div>
+            <p>Mumbai (formerly Bombay) is India's bustling financial capital, known for its vibrant culture, and thriving film industry, Bollywood.
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 7000 <span>&#8377; 9500</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=7000'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/kanya.jpg" alt="Card Image">
+        <div class="card-content">
+            <div class="card-header">
+                <img src="images/location.png" alt=""><h2>Kanyakumari</h2>
+            </div>
+            <p>Kanyakumari is the southernmost tip of India, renowned for its stunning sunsets and the Vivekananda Rock Memorial.
+
+
+
+            </p>
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <img src="images/icons8-star-48.png" alt="">
+            <div class="pricing">&#8377; 5890 <span>&#8377; 7500</span></div>
+            <div class="card-footer">
+                <button class="book"  onclick="window.location.href='payment_form.html?price=5890'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    // Toggle the nav menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+
+    // Function to toggle the navigation menu visibility
+    function toggleNavMenu() {
+        nav.classList.toggle('active');
+    }
+
+    hamburger.addEventListener('click', toggleNavMenu);
+
+</script>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            word-wrap: normal;
+        }
+
+        header {
+            background-color: #240231;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Section styles */
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: #e7f5e6;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: #ffffff;
+        }
+
+        .team .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .team .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .team .team-member .member-info h3 {
+            font-size: 1.5rem;
+            color: #02311b;
+        }
+
+        .team .team-member .member-info p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        footer p,
+        footer ul {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #05462d;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-container>div {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-container .social-media {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-container .social-media a {
+            font-size: 2rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer-container .social-media #Facebook:hover {
+            color: #1877F2;
+        }
+
+        .footer-container .social-media #Instagram:hover {
+            color: red;
+        }
+
+        .footer-container .social-media #LinkedIn:hover {
+            color: #0A66C2;
+        }
+
+        .footer-container .social-media #Twitter:hover {
+            color: #1DA1F2;
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-container>div {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .team .team-member {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .team .team-member img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>        We Provide Tour Plans for your most comfortable travel ever. Let yourself dive into the Beauty, Culture & festivals of India. Have You're Good time at India.
+        </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is simple: to offer you an unforgettable journey that connects you to the heart of India's traditions, people, festivals, art, and cuisine. Whether you're a history enthusiast, an adventure seeker, or a cultural explorer, we have something special for you. Our tours are designed to immerse you in the wonders of India's heritage and provide authentic, once-in-a-lifetime experiences.</p>
+    </section>
+
+    <!-- Team Section -->
+    <!-- <section class="section team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/120" alt="Team Member">
+            <div class="member-info">
+                <h3>John Doe</h3>
+                <p>CEO & Founder</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/120" alt="Team Member">
+            <div class="member-info">
+                <h3>Jane Smith</h3>
+                <p>Chief Operating Officer</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/120" alt="Team Member">
+            <div class="member-info">
+                <h3>James Brown</h3>
+                <p>Lead Developer</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to get in touch, feel free to contact us!</p>
+        <p>Email: contact@company.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>123 Street Name, City, Country</p>
+            <p>Email: info@company.com</p>
+            <p>Phone: (123) xxx-xxx</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Packages</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" title="Facebook" id="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" title="Instagram" id="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="LinkedIn" id="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" title="Twitter" id="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
