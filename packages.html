@@ -6,6 +6,7 @@
     <title>Responsive Navbar</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="navbar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* Resetting margins and paddings */
         * {
@@ -17,7 +18,6 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
-            margin-top: 8rem;
             /* margin-top: 70px; Adjust top margin to give space for fixed navbar */
         }
 
@@ -38,7 +38,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 28vw;
-            height: 75vh;
+            height: auto;
+            /* border: 2px solid red; */
+            padding: 10px 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
@@ -132,13 +134,13 @@
             box-shadow: -5px 8px 18px rgba(0, 0, 0, 0.8);
         }
         /* Responsive Design */
-        @media (max-width: 1024px) {
+        @media scree and(max-width: 1024px) {
             .card {
                 width: calc(50% - 20px); /* 2 cards per row on medium screens */
             }
         }
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             .card {
                 width: 100%; /* 1 card per row on small screens */
             }
@@ -146,31 +148,23 @@
     </style>
 </head>
 <body>
-<header>
-    <nav>
-        <!-- Logo on the left -->
+    <header>
         <div class="logo-img">
-            <img src="images/main-logo.jpeg" id="logo-img" alt="Company Logo">
-        </div>
-
-        <!-- Menu items centered -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#pack">Packages</a></li>
-            <li><a href="main.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-        <!-- Hamburger menu for small screens -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
-</header>
+          <img src="images/main-logo.jpeg" id="logo-img" alt="Company Logo">
+      </div>
+        <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="#gallery-section">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+      </header>
 <!-- Container for Cards -->
 <div class="cards-container" id="pack">
     <!-- Row 1 -->
@@ -180,7 +174,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Varanasi</h2>
             </div>
-            <p>Varanasi is one of the oldest living cities in world, renowned for spiritual significance, Ganges river ghats, and vibrant cultural heritage.</p>
+            <p>Varanasi is one of the oldest living cities in world, renowned for spiritual significance.</p>
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
@@ -256,7 +250,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Amritsar</h2>
             </div>
-            <p>Amritsar, a spiritual and cultural hub, is home to the Golden Temple, one of the holiest sites in Sikhism.
+            <p>Amritsar, a spiritual and cultural hub, is home to the Golden Temple
             </p>
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
@@ -275,7 +269,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Rajasthan</h2>
             </div>
-            <p>Rajasthan, known for its royal palaces, vibrant culture, and desert landscapes, is a land of rich history and traditions.
+            <p>Rajasthan, known for its royal palaces, vibrant culture, and desert landscapes
             </p>
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
@@ -295,7 +289,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Gujarat</h2>
             </div>
-            <p>Gujarat, a vibrant state on India's west coast, is renowned for its diverse culture, historic sites, and the iconic Rann of Kutch.
+            <p>Gujarat, a vibrant state on India's west coast
             </p>
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
@@ -314,7 +308,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Bombay</h2>
             </div>
-            <p>Mumbai (formerly Bombay) is India's bustling financial capital, known for its vibrant culture, and thriving film industry, Bollywood.
+            <p>Mumbai (formerly Bombay) is India's bustling financial capital
             </p>
             <img src="images/icons8-star-48.png" alt="">
             <img src="images/icons8-star-48.png" alt="">
@@ -333,7 +327,7 @@
             <div class="card-header">
                 <img src="images/location.png" alt=""><h2>Kanyakumari</h2>
             </div>
-            <p>Kanyakumari is the southernmost tip of India, renowned for its stunning sunsets and the Vivekananda Rock Memorial.
+            <p>Kanyakumari is the southernmost tip of India, renowned for its stunning sunsets
 
 
 
@@ -352,17 +346,5 @@
     
 
 </body>
-<script>
-    // Toggle the nav menu when hamburger is clicked
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.querySelector('nav');
-
-    // Function to toggle the navigation menu visibility
-    function toggleNavMenu() {
-        nav.classList.toggle('active');
-    }
-
-    hamburger.addEventListener('click', toggleNavMenu);
-
-</script>
+<script src="script.js"></script>
 </html>
