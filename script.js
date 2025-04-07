@@ -1,13 +1,15 @@
-// Toggle the nav menu when hamburger is clicked
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
-
-// Function to toggle the navigation menu visibility
-function toggleNavMenu() {
-    nav.classList.toggle('active');
+function openMenu(){
+    const hamburger = document.querySelector('.fa-bars')
+    const rightMenu = document.querySelector('header nav ul')
+    hamburger.style.display = 'none'
+    rightMenu.style.right = "0"
 }
-
-hamburger.addEventListener('click', toggleNavMenu);
+function closeMenu(){
+    const hamburger = document.querySelector('.fa-bars')
+    const rightMenu = document.querySelector('header nav ul')
+    hamburger.style.display = 'block'
+    rightMenu.style.right = "-250px"
+}mburger.addEventListener('click', toggleNavMenu);
 
 // Changing background image functionality
 const imageContainer = document.querySelector('.image-container');
