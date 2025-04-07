@@ -3,13 +3,6 @@ nav ul img{
   cursor: pointer;
   /* background-color: yellow; */
 }
-main {
-  min-height: auto;
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  overflow-x: hidden;
-}
-
 /* Navigation bar */
 header {
   /* width: 100%; */
